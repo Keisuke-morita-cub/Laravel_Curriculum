@@ -8,10 +8,11 @@
     </head>
 　　<body>
 　　    <h1>Blog Name</h1>
+　　    <p class='create'>[<a href='/posts/create'>create</a>]</p>
 　　    <div class='posts'>
 　　        @foreach ($posts as $post)
 　　        <div class 'post'>
-　　            <h2 class='title1'>{{ $post->title }}</h2>
+　　            <h3><a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
 　　            <p class='body'>{{ $post->body }}</p>
 　　        </div>
 　　      @endforeach
